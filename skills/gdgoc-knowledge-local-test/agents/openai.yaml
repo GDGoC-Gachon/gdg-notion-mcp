@@ -1,0 +1,7 @@
+interface:
+  display_name: "GDGoC Knowledge Live Local Test"
+  short_description: "Test real Notion retrieval without a deployment"
+  default_prompt: "Use $gdgoc-knowledge-local-test to answer from live Notion pages read-only."
+
+policy:
+  allow_implicit_invocation: false
