@@ -1,4 +1,7 @@
 import type { NotionMcpClient } from "./notion-mcp.client";
+import {
+    validateCreatePageInput
+} from "./notion.guard";
 import type {
     CreatePageInput,
     NotionPage,
@@ -10,7 +13,9 @@ import type {
 export class NotionService {
     constructor(private readonly client: NotionMcpClient) {} // 실제 Notion MCP 호출 담당 client를 외부에서 주입받음
 
-    async createPage(input: CreatePageInput): Promise<NotionPage> { // 새로운 Notion 페이지 생성
+    // 새로운 Notion 페이지 생성
+    async createPage(input: CreatePageInput): Promise<NotionPage> {
+        validateCreatePageInput(input);
         return this.client.createPage(input);
     }
 
