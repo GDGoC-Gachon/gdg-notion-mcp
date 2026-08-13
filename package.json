@@ -1,0 +1,29 @@
+{
+  "name": "gdg-notion-mcp",
+  "version": "1.0.0",
+  "description": "## Codex CLI",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GDGoC-Gachon/gdg-notion-mcp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GDGoC-Gachon/gdg-notion-mcp/issues"
+  },
+  "homepage": "https://github.com/GDGoC-Gachon/gdg-notion-mcp#readme",
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2",
+    "vitest": "^3.2.7"
+  }
+}
