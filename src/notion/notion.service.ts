@@ -1,6 +1,7 @@
 import type { NotionMcpClient } from "./notion-mcp.client";
 import {
-    validateCreatePageInput
+    validateCreatePageInput,
+    validateReadPageInput,
 } from "./notion.guard";
 import type {
     CreatePageInput,
@@ -19,7 +20,9 @@ export class NotionService {
         return this.client.createPage(input);
     }
 
-    async readPage(input: ReadPageInput): Promise<NotionPage> { // Notion 페이지 조회
+    // Notion 페이지 조회
+    async readPage(input: ReadPageInput): Promise<NotionPage> {
+        validateReadPageInput(input);
         return this.client.readPage(input);
     }
 

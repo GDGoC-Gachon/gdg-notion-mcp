@@ -1,5 +1,6 @@
 import {
     type CreatePageInput,
+    type ReadPageInput,
     type UpdatePageInput,
 } from "./notion.types";
 import { NotionValidationError } from "./notion.errors";
@@ -142,4 +143,14 @@ export function validateUpdatePageInput(input: UpdatePageInput): void {
     throw new NotionValidationError(
         `Unsupported update type: ${String(exhaustiveCheck)}`,
     );
+}
+
+// Read 요청 검증
+export function validateReadPageInput(input: ReadPageInput): void {
+    // 빈 문자열이나 공백만 있는 값은 허용 X
+    if (isBlank(input.pageIdOrUrl)) {
+        throw new NotionValidationError(
+            "Read request requires a valid pageId or URL.",
+        );
+    }
 }
