@@ -7,7 +7,7 @@ import type { NotionPage } from "../src/notion/notion.types";
 
 // Read 기능 단위 테스트
 describe("NotionService.readPage", () => {
-    // Mock MCP client 생성
+    // 공통 Mock MCP client 생성
     function createMockClient(): NotionMcpClient {
         return {
             connect: vi.fn(),
