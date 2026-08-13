@@ -164,4 +164,36 @@ Follow this workflow for every Update request:
 
 ## Confirmation Rules
 
+<!--
+Safety intent:
+1. 사용자의 write 의도가 명확하고 대상과 변경 범위가 정확히 특정된 경우에는 불필요한 재확인을 요구하지 않는다.
+2. 대상, 변경 내용, 영향 범위 중 하나라도 모호하면 임의로 판단하지 않고 사용자에게 확인한다.
+3. 넓은 범위의 수정이나 기존 내용을 크게 덮어쓰는 작업은 더 보수적으로 확인한다.
+-->
+
+Do not require an additional confirmation when all of the following are true:
+1. The user explicitly requested a live Create or Update operation.
+2. The exact target or parent has been uniquely identified.
+3. The requested properties or content are unambiguous.
+4. The operation can be performed without modifying unrelated data.
+5. The operation is narrow and consistent with the user's explicit request.
+
+Require clarification before performing the write when any of the following are true:
+1. Multiple possible target pages, parents, or data sources remain.
+2. The requested property or content cannot be identified uniquely.
+3. A required title, parent, property value, or replacement target is missing.
+4. The request depends on guessing information that was not provided by the user or verified from Notion.
+5. The requested change could affect unrelated properties or content.
+6. The request would require a broad or destructive modification when the user's intent does not clearly require it.
+7. The current fetched state conflicts with the user's description in a way that could change the intended write.
+
+When clarification is required:
+- Do not call `notion_create_pages` or `notion_update_page`.
+- Explain only the ambiguity necessary to continue.
+- Ask for the minimum additional information required.
+- Return:
+  `needs_clarification`
+
+Do not ask for confirmation again merely because the operation is a write if the user has already explicitly requested the exact operation and all safety conditions are satisfied.
+
 ## Response Contract
