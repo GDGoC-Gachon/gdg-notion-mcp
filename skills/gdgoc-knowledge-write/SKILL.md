@@ -65,6 +65,46 @@ If a safe write cannot be determined from the available information, do not perf
 
 ## Create Workflow
 
+<!--
+Safety intent:
+1. 새 페이지를 만들 위치와 내용을 추측하지 않는다.
+2. parent를 반드시 명확하게 확인하고, database/data source 아래에 생성할 경우 실제 schema를 먼저 확인한다.
+3. 사용자가 요청한 범위를 넘어 property나 content를 임의로 추가하지 않는다.
+4. Create 성공 응답만 믿지 않고 생성된 page를 다시 확인한다.
+-->
+
+Follow this workflow for every Create request:
+1. Confirm that the user explicitly requested a live Notion page creation.
+2. Identify the exact parent for the new page.
+   - Require either a parent page or a data source.
+   - Do not create a workspace-level private page by omitting the parent.
+3. Confirm the new page title and the content or properties the user wants to create.
+4. If the target parent is a database or data source:
+   - Fetch the target first.
+   - Confirm the actual data source ID.
+   - Inspect the current schema and title property.
+   - Use only valid property names and values supported by that schema.
+5. If the target parent cannot be identified uniquely, stop and return:
+   `needs_clarification`
+6. If required properties or the page title are missing, stop and return:
+   `needs_clarification`
+7. If `template_id` is used, do not send page content in the same Create request.
+8. Do not add properties, content, child pages, or metadata that the user did not request.
+9. Before calling `notion_create_pages`, verify the final Create scope:
+   - Parent
+   - Number of pages to create
+   - Title
+   - Properties
+   - Content or template
+10. Call `notion_create_pages` only after the request passes the above checks.
+11. Do not automatically retry a Create request when the result is uncertain, because this may create duplicate pages.
+12. After creation, verify the created page using its returned page ID or URL when possible.
+13. Report:
+- Created page title
+- Parent location
+- Created page URL
+- Whether post-create verification succeeded
+
 ## Update Workflow
 
 ## Confirmation Rules
