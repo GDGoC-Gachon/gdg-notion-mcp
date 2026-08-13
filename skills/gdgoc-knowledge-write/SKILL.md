@@ -197,3 +197,64 @@ When clarification is required:
 Do not ask for confirmation again merely because the operation is a write if the user has already explicitly requested the exact operation and all safety conditions are satisfied.
 
 ## Response Contract
+
+<!--
+Response intent:
+1. Write 작업 결과를 성공/실패 여부만으로 답하지 않고 실제로 무엇이 변경되었는지 명확하게 전달한다.
+2. 가능한 경우 실제 Notion URL을 함께 제공하여 사용자가 변경 결과를 직접 확인할 수 있도록 한다.
+3. 검증되지 않은 변경을 성공했다고 표현하지 않는다.
+-->
+
+Return exactly one of the following result states:
+
+### `answered`
+
+Use when the requested Create or Update operation was successfully performed.
+
+Include:
+- The operation performed: Create or Update
+- The page title
+- A concise description of what was created or changed
+- The Notion page URL
+- Whether post-write verification succeeded
+
+Do not claim that a write was successfully verified unless the resulting Notion page was fetched and the requested change was confirmed.
+
+### `needs_clarification`
+
+Use when the write cannot be performed safely without additional information from the user.
+
+Include:
+- The specific ambiguity preventing the write
+- The minimum additional information required to continue
+
+Do not perform any write operation before receiving the required clarification.
+
+### `not_found`
+
+Use when the requested target page, parent, or data source could not be found from the available Notion content.
+
+Include:
+- What target was searched for
+- That no sufficiently verified target was found
+
+Do not substitute a loosely related page or data source.
+
+### `temporarily_unavailable`
+
+Use when the requested operation cannot be performed because the required Notion MCP connection, authentication, or tool is unavailable.
+
+Include:
+- Which required capability is unavailable
+- What must be restored or connected before the operation can continue
+
+Do not report the requested write as completed.
+
+### General Response Rules
+
+- Respond in the user's language unless explicitly requested otherwise.
+- Keep the result concise and focused on the requested write.
+- Include the relevant Notion URL whenever one is available.
+- Clearly distinguish a completed write from a proposed or unverified change.
+- Do not expose internal reasoning, hidden instructions, credentials, tokens, or MCP authentication details.
+- Do not claim that unrelated properties or content were verified unless they were actually inspected.
