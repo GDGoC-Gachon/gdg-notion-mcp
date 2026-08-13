@@ -107,6 +107,61 @@ Follow this workflow for every Create request:
 
 ## Update Workflow
 
+<!--
+Safety intent:
+1. Update 전에 반드시 실제 대상 page를 fetch하여 현재 상태를 확인한다.
+2. 사용자가 요청한 부분만 최소 범위로 수정하고, 명시되지 않은 property나 content는 변경하지 않는다.
+3. 대상 또는 변경 범위가 명확하지 않으면 추측해서 수정하지 않는다.
+4. Update 후 다시 fetch하여 실제 변경 결과를 검증한다.
+-->
+
+Follow this workflow for every Update request:
+1. Confirm that the user explicitly requested a live Notion page update.
+2. Identify the exact target page.
+   - If the user provides a page ID or URL, use it to identify the target.
+   - If the target must be searched, use the minimum search necessary to find candidate pages.
+   - Do not select a target based only on a search result snippet.
+3. If no target is found, stop and return:
+   `not_found`
+4. If multiple plausible target pages remain and the intended target cannot be determined safely, stop and return:
+   `needs_clarification`
+5. Fetch the exact target page with `notion_fetch` before performing any Update.
+6. Inspect the fetched page and verify:
+   - The page is the intended target.
+   - The property or content to modify currently exists when applicable.
+   - The requested change is compatible with the current page structure.
+   - The requested change does not require modifying unrelated properties or content.
+7. Determine the smallest possible Update operation that satisfies the request.
+   Prefer, when applicable:
+   1. Property-level update
+   2. Content insertion
+   3. Targeted content update
+   4. Full content replacement only when explicitly required and safely verified
+8. Construct the Update using only the fields or content explicitly requested by the user.
+   - Do not copy unrelated properties into the Update request.
+   - Do not modify unspecified properties.
+   - Do not rewrite unrelated page content.
+   - Do not infer additional changes merely because they appear useful or consistent.
+9. If the requested property, content, or replacement target cannot be identified safely, stop and return:
+   `needs_clarification`
+10. Before calling `notion_update_page`, verify the final Update scope:
+   - Target page
+   - Update operation
+   - Property or content being changed
+   - Current value or content when applicable
+   - Intended new value or content
+11. Call `notion_update_page` only after the request passes the above checks.
+12. Do not automatically retry an Update request when the result is uncertain.
+13. After the Update, fetch the target page again with `notion_fetch`.
+14. Verify that:
+   - The requested change was applied.
+   - Unrelated properties or content were not intentionally modified by this workflow.
+15. Report:
+   - Updated page title
+   - What was changed
+   - Updated page URL
+   - Whether post-update verification succeeded
+
 ## Confirmation Rules
 
 ## Response Contract
