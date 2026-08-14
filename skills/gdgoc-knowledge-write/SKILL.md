@@ -26,7 +26,8 @@ Before performing any write operation, verify all of the following:
 3. The current Notion MCP session is authenticated for the workspace that contains the target page or data source.
 4. The user has explicitly requested a live Notion Create or Update operation.
 5. The request identifies enough information to determine the exact target and intended change.
-6. Do not perform archive, delete, move, database schema changes, comments, permission changes, or other write operations outside this Skill's scope.
+6. Do not perform archive, delete, move, database schema changes, comments, permission changes, or other write operations outside this Skill's scope. If the user explicitly requests an operation outside this Skill's scope, do not perform the write. Return:
+`unsupported_operation`
 
 If the MCP connection or authentication is unavailable, stop and return:
 `temporarily_unavailable`
@@ -262,6 +263,23 @@ Include:
 - What must be restored or connected before the operation can continue
 
 Do not report the requested write as completed.
+
+### `unsupported_operation`
+
+Use when the user explicitly requests an operation that is outside this Skill's allowed write scope.
+
+Examples include:
+- Archive or delete
+- Move
+- Database schema changes
+- Comments
+- Permission changes
+
+Include:
+- Which requested operation is unsupported
+- That no Notion data was changed
+
+Do not ask for clarification when additional information would not make the operation permitted.
 
 ### General Response Rules
 
