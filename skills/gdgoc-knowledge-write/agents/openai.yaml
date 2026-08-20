@@ -1,0 +1,7 @@
+interface:
+  display_name: "GDGoC Knowledge Safe Write"
+  short_description: "Safely create and update live Notion pages"
+  default_prompt: "Use $gdgoc-knowledge-write to safely create or update an explicitly identified Notion page."
+
+policy:
+  allow_implicit_invocation: false
