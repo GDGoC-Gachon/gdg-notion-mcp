@@ -1,0 +1,940 @@
+{
+  "source": "notion-new MCP",
+  "fetched_at": "2026-08-20",
+  "note": "Each database's `properties` object is the raw `schema` object returned by Notion's data-source fetch, preserved verbatim (no summarization, no option pruning).",
+  "databases": [
+    {
+      "id": "3742463a-9512-8058-b342-000b5ab6590c",
+      "name": "동아리원 개인 정보",
+      "url": "https://app.notion.com/p/3742463a95128007a608c317ac168e7f",
+      "data_source_url": "collection://3742463a-9512-8058-b342-000b5ab6590c",
+      "properties": {
+        "Notion User": {
+          "description": "",
+          "name": "Notion User",
+          "type": "person"
+        },
+        "관련 작업 항목": {
+          "dataSourceUrl": "collection://3a07f559-7b0a-4af9-962c-cbedc45984b6",
+          "description": "",
+          "name": "관련 작업 항목",
+          "propertyUrl": "collectionProperty://3a07f559-7b0a-4af9-962c-cbedc45984b6/VHhGYQ",
+          "type": "relation"
+        },
+        "관련 캘린더 항목": {
+          "dataSourceUrl": "collection://3742463a-9512-80a7-945d-000bfc271048",
+          "description": "",
+          "name": "관련 캘린더 항목",
+          "propertyUrl": "collectionProperty://3742463a-9512-80a7-945d-000bfc271048/V0xRZQ",
+          "type": "relation"
+        },
+        "담당 업무": {
+          "dataSourceUrl": "collection://3742463a-9512-816b-b14a-000b288ef9f2",
+          "description": "",
+          "name": "담당 업무",
+          "propertyUrl": "collectionProperty://3742463a-9512-816b-b14a-000b288ef9f2/d3R9VA",
+          "type": "relation"
+        },
+        "담당 프로젝트": {
+          "dataSourceUrl": "collection://3742463a-9512-8070-8fce-000bc0b0cbfb",
+          "description": "",
+          "name": "담당 프로젝트",
+          "propertyUrl": "collectionProperty://3742463a-9512-8070-8fce-000bc0b0cbfb/c2F2ag",
+          "type": "relation"
+        },
+        "소속 부서": {
+          "description": "",
+          "name": "소속 부서",
+          "options": [
+            {
+              "color": "orange",
+              "description": "",
+              "name": "개발 지원",
+              "url": "collectionPropertyOption://3742463a-9512-8058-b342-000b5ab6590c/ejtGWQ/Wkx5eA"
+            },
+            {
+              "color": "green",
+              "description": "",
+              "name": "기획 & 운영",
+              "url": "collectionPropertyOption://3742463a-9512-8058-b342-000b5ab6590c/ejtGWQ/a1U7bw"
+            },
+            {
+              "color": "purple",
+              "description": "",
+              "name": "리더진",
+              "url": "collectionPropertyOption://3742463a-9512-8058-b342-000b5ab6590c/ejtGWQ/fVVXcA"
+            },
+            {
+              "color": "yellow",
+              "description": "",
+              "name": "디자인 & 마케팅",
+              "url": "collectionPropertyOption://3742463a-9512-8058-b342-000b5ab6590c/ejtGWQ/OTAzYmE0MWUtMGJlMy00Njk2LWIyMzYtZWY3OGU2YjFjZjkz"
+            }
+          ],
+          "type": "multi_select"
+        },
+        "이름": {
+          "description": "",
+          "name": "이름",
+          "type": "title"
+        },
+        "이메일": {
+          "description": "",
+          "name": "이메일",
+          "type": "email"
+        },
+        "참가 미팅": {
+          "dataSourceUrl": "collection://3742463a-9512-811c-8514-000b0cc169ba",
+          "description": "",
+          "name": "참가 미팅",
+          "propertyUrl": "collectionProperty://3742463a-9512-811c-8514-000b0cc169ba/WW13Wg",
+          "type": "relation"
+        },
+        "참여 기수": {
+          "dataSourceUrl": "collection://3932463a-9512-8047-8d74-000b6f87da00",
+          "description": "",
+          "name": "참여 기수",
+          "propertyUrl": "collectionProperty://3932463a-9512-8047-8d74-000b6f87da00/PUNKbA",
+          "type": "relation"
+        },
+        "참여 프로젝트": {
+          "dataSourceUrl": "collection://3742463a-9512-8070-8fce-000bc0b0cbfb",
+          "description": "",
+          "name": "참여 프로젝트",
+          "propertyUrl": "collectionProperty://3742463a-9512-8070-8fce-000bc0b0cbfb/YldGRA",
+          "type": "relation"
+        }
+      }
+    },
+    {
+      "id": "3742463a-9512-8070-8fce-000bc0b0cbfb",
+      "name": "프로젝트",
+      "url": "https://app.notion.com/p/3742463a95128034b6fcf2ed8d41660a",
+      "data_source_url": "collection://3742463a-9512-8070-8fce-000bc0b0cbfb",
+      "default_page_template": "https://app.notion.com/p/39d2463a951280ae9d43ffc1a9e10981",
+      "properties": {
+        "ALL": {
+          "aggregation": "count",
+          "description": "",
+          "name": "ALL",
+          "relationPropertyUrl": "collectionProperty://3742463a-9512-8070-8fce-000bc0b0cbfb/U1BCRA",
+          "targetPropertyType": "title",
+          "targetPropertyUrl": "collectionProperty://3742463a-9512-816b-b14a-000b288ef9f2/dGl0bGU",
+          "type": "rollup"
+        },
+        "CHECK": {
+          "aggregation": "sum",
+          "description": "",
+          "name": "CHECK",
+          "relationPropertyUrl": "collectionProperty://3742463a-9512-8070-8fce-000bc0b0cbfb/U1BCRA",
+          "targetPropertyType": "formula",
+          "targetPropertyUrl": "collectionProperty://3742463a-9512-816b-b14a-000b288ef9f2/T0tLQA",
+          "type": "rollup"
+        },
+        "건들지마!!!!!!": {
+          "description": "",
+          "name": "건들지마!!!!!!",
+          "type": "text"
+        },
+        "기수 구분": {
+          "dataSourceUrl": "collection://3932463a-9512-8047-8d74-000b6f87da00",
+          "description": "",
+          "limit": 1,
+          "name": "기수 구분",
+          "propertyUrl": "collectionProperty://3932463a-9512-8047-8d74-000b6f87da00/TGZ7Og",
+          "type": "relation"
+        },
+        "목적": {
+          "description": "",
+          "name": "목적",
+          "type": "text"
+        },
+        "미팅": {
+          "dataSourceUrl": "collection://3742463a-9512-811c-8514-000b0cc169ba",
+          "description": "",
+          "name": "미팅",
+          "propertyUrl": "collectionProperty://3742463a-9512-811c-8514-000b0cc169ba/XGJaOg",
+          "type": "relation"
+        },
+        "상태": {
+          "description": "",
+          "groups": {
+            "complete": [
+              {
+                "color": "green",
+                "description": "",
+                "name": "완료",
+                "url": "collectionPropertyOption://3742463a-9512-8070-8fce-000bc0b0cbfb/Pm5kcA/MjdkNThhYTQtMDkyYi00YzVjLWJkYWQtZThjZWU5OGY5Mzhj"
+              }
+            ],
+            "current": [],
+            "future": [],
+            "in_progress": [
+              {
+                "color": "blue",
+                "description": "",
+                "name": "진행 중",
+                "url": "collectionPropertyOption://3742463a-9512-8070-8fce-000bc0b0cbfb/Pm5kcA/MzMyZmMxNWUtNmZlYS00OGQ4LWIzYWMtMjhlYWNhZTVhMmUx"
+              }
+            ],
+            "to_do": [
+              {
+                "description": "",
+                "name": "시작 전",
+                "url": "collectionPropertyOption://3742463a-9512-8070-8fce-000bc0b0cbfb/Pm5kcA/YjhkYWEwYTItNDZjMC00Y2EwLWE5ZDAtYzY5ZjY1YzUwMGI5"
+              }
+            ]
+          },
+          "name": "상태",
+          "type": "status"
+        },
+        "생성 일시": {
+          "description": "",
+          "name": "생성 일시",
+          "type": "created_time"
+        },
+        "시작일": {
+          "description": "",
+          "name": "시작일",
+          "type": "date"
+        },
+        "업무": {
+          "dataSourceUrl": "collection://3742463a-9512-816b-b14a-000b288ef9f2",
+          "description": "",
+          "name": "업무",
+          "propertyUrl": "collectionProperty://3742463a-9512-816b-b14a-000b288ef9f2/SnRxYw",
+          "type": "relation"
+        },
+        "이름": {
+          "description": "",
+          "name": "이름",
+          "type": "title"
+        },
+        "일자 메시지": {
+          "codeUrl": "formulaCode://3742463a-9512-8070-8fce-000bc0b0cbfb/UXRLfQ",
+          "description": "",
+          "name": "일자 메시지",
+          "type": "formula"
+        },
+        "종료일": {
+          "description": "",
+          "name": "종료일",
+          "type": "date"
+        },
+        "팀원": {
+          "dataSourceUrl": "collection://3742463a-9512-8058-b342-000b5ab6590c",
+          "description": "",
+          "name": "팀원",
+          "propertyUrl": "collectionProperty://3742463a-9512-8058-b342-000b5ab6590c/c2pETw",
+          "type": "relation"
+        },
+        "팀장": {
+          "dataSourceUrl": "collection://3742463a-9512-8058-b342-000b5ab6590c",
+          "description": "",
+          "limit": 1,
+          "name": "팀장",
+          "propertyUrl": "collectionProperty://3742463a-9512-8058-b342-000b5ab6590c/bW5tcw",
+          "type": "relation"
+        },
+        "프로젝트 진행률": {
+          "codeUrl": "formulaCode://3742463a-9512-8070-8fce-000bc0b0cbfb/YEJqWQ",
+          "description": "",
+          "name": "프로젝트 진행률",
+          "type": "formula"
+        }
+      }
+    },
+    {
+      "id": "3742463a-9512-816b-b14a-000b288ef9f2",
+      "name": "업무",
+      "url": "https://app.notion.com/p/3742463a951280f293efd9f54ce85efb",
+      "data_source_url": "collection://3742463a-9512-816b-b14a-000b288ef9f2",
+      "page_templates": [
+        { "name": "새 페이지", "url": "https://app.notion.com/p/39d2463a951280ae8ab7d0a2528119d7" }
+      ],
+      "properties": {
+        "D-Day": {
+          "codeUrl": "formulaCode://3742463a-9512-816b-b14a-000b288ef9f2/VmJAdw",
+          "description": "",
+          "name": "D-Day",
+          "type": "formula"
+        },
+        "Output": {
+          "description": "",
+          "name": "Output",
+          "type": "url"
+        },
+        "score": {
+          "codeUrl": "formulaCode://3742463a-9512-816b-b14a-000b288ef9f2/PFV1TA",
+          "description": "",
+          "name": "score",
+          "type": "formula"
+        },
+        "구분": {
+          "description": "",
+          "name": "구분",
+          "options": [
+            {
+              "color": "blue",
+              "description": "",
+              "name": "정리",
+              "url": "collectionPropertyOption://3742463a-9512-816b-b14a-000b288ef9f2/Y3VdeQ/TjpLYg"
+            },
+            {
+              "color": "pink",
+              "description": "",
+              "name": "운영",
+              "url": "collectionPropertyOption://3742463a-9512-816b-b14a-000b288ef9f2/Y3VdeQ/YnpRbg"
+            },
+            {
+              "color": "brown",
+              "description": "",
+              "name": "조사",
+              "url": "collectionPropertyOption://3742463a-9512-816b-b14a-000b288ef9f2/Y3VdeQ/NDg4YzczNTItZjYyMi00NmExLWIwOTctY2I2YWUzZDA5NTg1"
+            },
+            {
+              "color": "purple",
+              "description": "",
+              "name": "기획",
+              "url": "collectionPropertyOption://3742463a-9512-816b-b14a-000b288ef9f2/Y3VdeQ/YTY2OWRiMjktMDViNC00OThiLWE2MWEtOTM4M2JhOTI4MzJm"
+            },
+            {
+              "color": "gray",
+              "description": "",
+              "name": "진행",
+              "url": "collectionPropertyOption://3742463a-9512-816b-b14a-000b288ef9f2/Y3VdeQ/YTA1YmI4NWItZjA3ZC00NjBmLWEwM2MtZDc4MDE3Y2IyYzhh"
+            }
+          ],
+          "type": "select"
+        },
+        "내용": {
+          "description": "",
+          "name": "내용",
+          "type": "title"
+        },
+        "담당자": {
+          "description": "",
+          "name": "담당자",
+          "type": "person"
+        },
+        "마감일": {
+          "description": "",
+          "name": "마감일",
+          "type": "date"
+        },
+        "상태": {
+          "description": "",
+          "groups": {
+            "complete": [
+              {
+                "color": "green",
+                "description": "",
+                "name": "완료",
+                "url": "collectionPropertyOption://3742463a-9512-816b-b14a-000b288ef9f2/Sl1TRQ/MzQ4NDMyNmMtZDM5ZS00ZTg3LTgwMGUtZWNlMzE4NWY3NTgx"
+              }
+            ],
+            "current": [],
+            "future": [],
+            "in_progress": [
+              {
+                "color": "blue",
+                "description": "",
+                "name": "진행 중",
+                "url": "collectionPropertyOption://3742463a-9512-816b-b14a-000b288ef9f2/Sl1TRQ/MTE0OGI3NGEtNjljZi00ZTk5LTkzZDQtYThlMTNiNDdlYzgz"
+              }
+            ],
+            "to_do": [
+              {
+                "description": "",
+                "name": "시작 전",
+                "url": "collectionPropertyOption://3742463a-9512-816b-b14a-000b288ef9f2/Sl1TRQ/ZDU4M2VlMmYtOWMzYy00NjgyLWI3MjQtY2I1OGFmZWU5ZmEz"
+              }
+            ]
+          },
+          "name": "상태",
+          "type": "status"
+        },
+        "생성 미팅": {
+          "dataSourceUrl": "collection://3742463a-9512-811c-8514-000b0cc169ba",
+          "description": "",
+          "name": "생성 미팅",
+          "propertyUrl": "collectionProperty://3742463a-9512-811c-8514-000b0cc169ba/Pkdadg",
+          "type": "relation"
+        },
+        "생성 일시": {
+          "description": "",
+          "name": "생성 일시",
+          "type": "created_time"
+        },
+        "완료 여부": {
+          "codeUrl": "formulaCode://3742463a-9512-816b-b14a-000b288ef9f2/T0tLQA",
+          "description": "",
+          "name": "완료 여부",
+          "type": "formula"
+        },
+        "점검 미팅": {
+          "dataSourceUrl": "collection://3742463a-9512-811c-8514-000b0cc169ba",
+          "description": "",
+          "name": "점검 미팅",
+          "propertyUrl": "collectionProperty://3742463a-9512-811c-8514-000b0cc169ba/eXxIQw",
+          "type": "relation"
+        },
+        "프로젝트": {
+          "dataSourceUrl": "collection://3742463a-9512-8070-8fce-000bc0b0cbfb",
+          "description": "",
+          "name": "프로젝트",
+          "propertyUrl": "collectionProperty://3742463a-9512-8070-8fce-000bc0b0cbfb/U1BCRA",
+          "type": "relation"
+        },
+        "프로젝트 상태": {
+          "description": "",
+          "name": "프로젝트 상태",
+          "relationPropertyUrl": "collectionProperty://3742463a-9512-816b-b14a-000b288ef9f2/SnRxYw",
+          "targetPropertyType": "status",
+          "targetPropertyUrl": "collectionProperty://3742463a-9512-8070-8fce-000bc0b0cbfb/Pm5kcA",
+          "type": "rollup"
+        }
+      }
+    },
+    {
+      "id": "3742463a-9512-811c-8514-000b0cc169ba",
+      "name": "업무 캘린더",
+      "url": "https://app.notion.com/p/3742463a951280a2826fd2cc6b361b2e",
+      "data_source_url": "collection://3742463a-9512-811c-8514-000b0cc169ba",
+      "page_templates": [
+        { "name": "[00]0차 정기 회의", "url": "https://app.notion.com/p/39d2463a9512801b94e0cd91cbe6a06f" },
+        { "name": "새 페이지", "url": "https://app.notion.com/p/39d2463a951280c8bbedd7120faaeef2" }
+      ],
+      "properties": {
+        "D-Day": {
+          "codeUrl": "formulaCode://3742463a-9512-811c-8514-000b0cc169ba/cnJWQg",
+          "description": "",
+          "name": "D-Day",
+          "type": "formula"
+        },
+        "관련 프로젝트": {
+          "dataSourceUrl": "collection://3742463a-9512-8070-8fce-000bc0b0cbfb",
+          "description": "",
+          "name": "관련 프로젝트",
+          "propertyUrl": "collectionProperty://3742463a-9512-8070-8fce-000bc0b0cbfb/XXJmaQ",
+          "type": "relation"
+        },
+        "기수 구분": {
+          "dataSourceUrl": "collection://3932463a-9512-8047-8d74-000b6f87da00",
+          "description": "",
+          "limit": 1,
+          "name": "기수 구분",
+          "propertyUrl": "collectionProperty://3932463a-9512-8047-8d74-000b6f87da00/S2tyXg",
+          "type": "relation"
+        },
+        "날짜": {
+          "description": "",
+          "name": "날짜",
+          "type": "date"
+        },
+        "미완료 Task": {
+          "codeUrl": "formulaCode://3742463a-9512-811c-8514-000b0cc169ba/dX5hWg",
+          "description": "",
+          "name": "미완료 Task",
+          "type": "formula"
+        },
+        "미팅 요약": {
+          "description": "",
+          "name": "미팅 요약",
+          "type": "text"
+        },
+        "생성된 업무": {
+          "dataSourceUrl": "collection://3742463a-9512-816b-b14a-000b288ef9f2",
+          "description": "",
+          "name": "생성된 업무",
+          "propertyUrl": "collectionProperty://3742463a-9512-816b-b14a-000b288ef9f2/fnNvXQ",
+          "type": "relation"
+        },
+        "완료": {
+          "description": "",
+          "name": "완료",
+          "type": "checkbox"
+        },
+        "유형": {
+          "description": "",
+          "name": "유형",
+          "options": [
+            {
+              "color": "default",
+              "description": "",
+              "name": "업무 일정",
+              "url": "collectionPropertyOption://3742463a-9512-811c-8514-000b0cc169ba/ZlpOaw/VlFxdg"
+            },
+            {
+              "color": "blue",
+              "description": "",
+              "name": "행사 일정",
+              "url": "collectionPropertyOption://3742463a-9512-811c-8514-000b0cc169ba/ZlpOaw/cm5vWg"
+            },
+            {
+              "color": "red",
+              "description": "",
+              "name": "회의",
+              "url": "collectionPropertyOption://3742463a-9512-811c-8514-000b0cc169ba/ZlpOaw/ZVJxYw"
+            }
+          ],
+          "type": "select"
+        },
+        "이름": {
+          "description": "",
+          "name": "이름",
+          "type": "title"
+        },
+        "장소": {
+          "description": "",
+          "name": "장소",
+          "type": "text"
+        },
+        "점검 Task": {
+          "dataSourceUrl": "collection://3742463a-9512-816b-b14a-000b288ef9f2",
+          "description": "",
+          "name": "점검 Task",
+          "propertyUrl": "collectionProperty://3742463a-9512-816b-b14a-000b288ef9f2/eEI9Rw",
+          "type": "relation"
+        },
+        "참가자": {
+          "dataSourceUrl": "collection://3742463a-9512-8058-b342-000b5ab6590c",
+          "description": "",
+          "name": "참가자",
+          "propertyUrl": "collectionProperty://3742463a-9512-8058-b342-000b5ab6590c/dFtRcg",
+          "type": "relation"
+        }
+      }
+    },
+    {
+      "id": "3932463a-9512-8047-8d74-000b6f87da00",
+      "name": "기수 구분",
+      "url": "https://app.notion.com/p/3932463a951280e1b5fecfd2b88a6eaf",
+      "data_source_url": "collection://3932463a-9512-8047-8d74-000b6f87da00",
+      "properties": {
+        "기수 종료까지": {
+          "codeUrl": "formulaCode://3932463a-9512-8047-8d74-000b6f87da00/Y1RVVQ",
+          "description": "",
+          "name": "기수 종료까지",
+          "type": "formula"
+        },
+        "동아리원": {
+          "dataSourceUrl": "collection://3742463a-9512-8058-b342-000b5ab6590c",
+          "description": "",
+          "name": "동아리원",
+          "propertyUrl": "collectionProperty://3742463a-9512-8058-b342-000b5ab6590c/RExLdg",
+          "type": "relation"
+        },
+        "동아리원 수": {
+          "aggregation": "count",
+          "description": "",
+          "name": "동아리원 수",
+          "relationPropertyUrl": "collectionProperty://3932463a-9512-8047-8d74-000b6f87da00/PUNKbA",
+          "targetPropertyType": "title",
+          "targetPropertyUrl": "collectionProperty://3742463a-9512-8058-b342-000b5ab6590c/dGl0bGU",
+          "type": "rollup"
+        },
+        "오거나이저": {
+          "dataSourceUrl": "collection://3742463a-9512-8058-b342-000b5ab6590c",
+          "description": "",
+          "name": "오거나이저",
+          "type": "relation"
+        },
+        "완료된 프로젝트": {
+          "codeUrl": "formulaCode://3932463a-9512-8047-8d74-000b6f87da00/Yj14Qw",
+          "description": "",
+          "name": "완료된 프로젝트",
+          "type": "formula"
+        },
+        "이름": {
+          "description": "",
+          "name": "이름",
+          "type": "title"
+        },
+        "종료일 문구": {
+          "codeUrl": "formulaCode://3932463a-9512-8047-8d74-000b6f87da00/b3RyXA",
+          "description": "",
+          "name": "종료일 문구",
+          "type": "formula"
+        },
+        "진행중인 프로젝트": {
+          "codeUrl": "formulaCode://3932463a-9512-8047-8d74-000b6f87da00/XUtBcw",
+          "description": "",
+          "name": "진행중인 프로젝트",
+          "type": "formula"
+        },
+        "프로젝트": {
+          "dataSourceUrl": "collection://3742463a-9512-8070-8fce-000bc0b0cbfb",
+          "description": "",
+          "name": "프로젝트",
+          "propertyUrl": "collectionProperty://3742463a-9512-8070-8fce-000bc0b0cbfb/Oj5LVg",
+          "type": "relation"
+        },
+        "행사 생성": {
+          "description": "",
+          "name": "행사 생성",
+          "type": "button"
+        },
+        "현재 기수 여부": {
+          "codeUrl": "formulaCode://3932463a-9512-8047-8d74-000b6f87da00/UFl5Pw",
+          "description": "",
+          "name": "현재 기수 여부",
+          "type": "formula"
+        },
+        "활동 시작": {
+          "description": "",
+          "name": "활동 시작",
+          "type": "date"
+        },
+        "활동 종료": {
+          "description": "",
+          "name": "활동 종료",
+          "type": "date"
+        },
+        "회의 등록": {
+          "description": "",
+          "name": "회의 등록",
+          "type": "button"
+        },
+        "회의록": {
+          "dataSourceUrl": "collection://3742463a-9512-811c-8514-000b0cc169ba",
+          "description": "",
+          "name": "회의록",
+          "propertyUrl": "collectionProperty://3742463a-9512-811c-8514-000b0cc169ba/fGZlfQ",
+          "type": "relation"
+        }
+      }
+    },
+    {
+      "id": "1a02463a-9512-82cb-8bc9-871eb46327a6",
+      "name": "커뮤니티 지식 아카이브",
+      "url": "https://app.notion.com/p/1c42463a951283fd942f8128e1a4b37d",
+      "data_source_url": "collection://1a02463a-9512-82cb-8bc9-871eb46327a6",
+      "properties": {
+        "검증 상태": {
+          "description": "",
+          "name": "검증 상태",
+          "options": [
+            {
+              "color": "green",
+              "description": "",
+              "name": "실사용 검증됨",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/WVRYRw/MTQ3NGE2ZGYtOWQzOC00ZjQzLWE1MzYtMjdmMDJiYTMyOGIw"
+            },
+            {
+              "color": "yellow",
+              "description": "",
+              "name": "후보",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/WVRYRw/YzUwYTI5MjYtZjc3Ny00YWMzLWI0NjktOWEyZWM0YmY3NGRj"
+            },
+            {
+              "color": "red",
+              "description": "",
+              "name": "사용 불가",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/WVRYRw/OGQ2MDQwMWUtYzQ3Zi00MzA0LThhNmItOWJmODk1NmYxODNh"
+            }
+          ],
+          "type": "select"
+        },
+        "관련 행사": {
+          "description": "",
+          "name": "관련 행사",
+          "options": [
+            {
+              "color": "red",
+              "description": "",
+              "name": "Retrofest",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/W1xhWQ/YTUxNTlhNjQtOWIzOC00NGI1LThjNDUtY2JhYzg2MDI0Y2Vh"
+            },
+            {
+              "color": "blue",
+              "description": "",
+              "name": "Final Stride DemoDay",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/W1xhWQ/YmQ1NmM2MTItNzEzOC00YTIxLWIyMzktYmFkMzNhNWI3YzZh"
+            },
+            {
+              "color": "green",
+              "description": "",
+              "name": "연합해커톤",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/W1xhWQ/YWVlM2RiZjItZmZkZi00YTMxLWI3YTAtZGJiYzZhOTI1MWJh"
+            },
+            {
+              "color": "orange",
+              "description": "",
+              "name": "와글와글 해커톤",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/W1xhWQ/MzFhODIxNzEtYzlhMS00M2FkLWI2YjgtYzJlZTJmZmY2NWRj"
+            },
+            {
+              "color": "purple",
+              "description": "",
+              "name": "SpecTrum",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/W1xhWQ/NmE1MzVmZGQtYTJlYi00Mzg1LWFlYjAtMzljNmRlMzk4ZTlm"
+            },
+            {
+              "color": "brown",
+              "description": "",
+              "name": "마일스콘",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/W1xhWQ/ZTk2NjIwMGItMDVjZC00ZDVkLTk5MjgtNWRmMWFiNjZiY2Jm"
+            },
+            {
+              "color": "gray",
+              "description": "",
+              "name": "상시",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/W1xhWQ/NjM0ZDdhMzQtMjhiZC00MjUwLWI0YmEtNTRlYTQ1ZDg0MGQ1"
+            },
+            {
+              "color": "yellow",
+              "description": "",
+              "name": "남궁성의 취업 세미나",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/W1xhWQ/ZGY0OTYzOWItOTAzNC00YWNkLWJlNGMtNTNhMDAyMWNmZjcx"
+            },
+            {
+              "color": "default",
+              "description": "",
+              "name": "Connect Session",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/W1xhWQ/NjI2ZTUyZjEtNWNlYy00MWEyLTk5NmUtYzZjMjZmYTE1MWU0"
+            },
+            {
+              "color": "pink",
+              "description": "",
+              "name": "LLM Insight Session",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/W1xhWQ/NDVlZjdlNjgtNzAxZC00MWE1LWI2ZjMtNDk5MjhlMmI0MTM3"
+            },
+            {
+              "color": "orange",
+              "description": "",
+              "name": "iOS App Sprint Challenge",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/W1xhWQ/NzNiMTgxNmEtNjU5Mi00NjM2LTliMWMtMzQyY2NiNjU5NzQz"
+            }
+          ],
+          "type": "multi_select"
+        },
+        "담당자": {
+          "description": "",
+          "name": "담당자",
+          "type": "text"
+        },
+        "로고 삽입 여부": {
+          "description": "",
+          "name": "로고 삽입 여부",
+          "type": "checkbox"
+        },
+        "링크": {
+          "description": "",
+          "name": "링크",
+          "type": "url"
+        },
+        "성격": {
+          "description": "레퍼런스=다음에 재사용할 지식 / 진행기록=지난 시즌 트래커",
+          "name": "성격",
+          "options": [
+            {
+              "color": "blue",
+              "description": "",
+              "name": "레퍼런스",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/YkhDWQ/OGZiNjk3YjMtYjcwYS00OTAyLTk2MGMtYTY4NmVlN2Y3Y2I2"
+            },
+            {
+              "color": "gray",
+              "description": "",
+              "name": "진행기록",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/YkhDWQ/MTU5YWZlYTUtOTBiMy00MDUzLTk4NGEtOTkyODJlYWYyMzRh"
+            }
+          ],
+          "type": "select"
+        },
+        "업무 영역": {
+          "description": "",
+          "name": "업무 영역",
+          "options": [
+            {
+              "color": "brown",
+              "description": "",
+              "name": "후원사",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/SkhkSw/OTM0YjlmMzMtMjcwMC00ODlmLWI4MmMtOTI4NGEzMjg3MGEz"
+            },
+            {
+              "color": "gray",
+              "description": "",
+              "name": "장소",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/SkhkSw/MzgyNTZlZDgtMmUyNi00MTNiLThiYTctMGFmYTlmYWI2YTdk"
+            },
+            {
+              "color": "red",
+              "description": "",
+              "name": "케이터링",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/SkhkSw/MzkwZjlkMjAtZGJmMC00NWIyLWExZWUtZDhmNTQ4ZmYyOTFm"
+            },
+            {
+              "color": "pink",
+              "description": "",
+              "name": "웰컴기프트",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/SkhkSw/MjZjZjlhYzEtODk0Ni00MjE4LWE0NTYtZDliNjhjNGRiZTIz"
+            },
+            {
+              "color": "orange",
+              "description": "",
+              "name": "발주처",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/SkhkSw/MjE1YWRlNjAtYTEzOC00ZWVjLTgzYjYtMTdlYTRmODllOTU3"
+            },
+            {
+              "color": "purple",
+              "description": "",
+              "name": "예산안",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/SkhkSw/NGU2MzU0YTEtNmE2MC00YzU0LWJlMDItMzE4OGM4MTM4ZDQw"
+            },
+            {
+              "color": "gray",
+              "description": "",
+              "name": "기획안",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/SkhkSw/ZWQzNzk2YzgtNWQwZi00MzIzLTgzNTQtYWQyZTkzM2NkOTQy"
+            },
+            {
+              "color": "yellow",
+              "description": "",
+              "name": "홍보",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/SkhkSw/NWI4Y2RkMjEtNmMwNC00NWNkLTgyZjgtNDJlMjBjODBjNTQ1"
+            },
+            {
+              "color": "green",
+              "description": "",
+              "name": "퍼블리싱",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/SkhkSw/MzgwODQ0ZTgtOGQ0OC00MzVlLTlkNmQtNTI3M2EwNDIxNTIy"
+            },
+            {
+              "color": "brown",
+              "description": "",
+              "name": "이벤트페이지",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/SkhkSw/MzRhYThjYmEtZTE4MS00YjM5LWFkYWItNzFiOTA0ODEzOTNk"
+            },
+            {
+              "color": "blue",
+              "description": "",
+              "name": "만족도조사",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/SkhkSw/MTNlMzk4ZWEtYTI5Yi00ODZmLTk4ODAtN2JiNzAxYTlhYmY4"
+            },
+            {
+              "color": "purple",
+              "description": "",
+              "name": "메일",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/SkhkSw/MzMyNTA3OTMtN2Y2NS00NjVmLWEzMDAtMTBlODQzNDEzZTk5"
+            },
+            {
+              "color": "yellow",
+              "description": "",
+              "name": "발표제안",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/SkhkSw/M2QwMThhZTctYzdiMy00ZjY1LTg4MzctZWNkNGE0YmQ4NDdk"
+            },
+            {
+              "color": "blue",
+              "description": "",
+              "name": "해외챕터",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/SkhkSw/MjI1NjE3MDItMjUyOC00NDk4LWE4ZmYtYjJhN2U5M2RhNjRk"
+            },
+            {
+              "color": "purple",
+              "description": "",
+              "name": "디자인",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/SkhkSw/YjU1NmY0NDktMTAxMi00MjE4LTg5YzktOWU5MDcyNTdiZjcy"
+            },
+            {
+              "color": "default",
+              "description": "",
+              "name": "브랜드",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/SkhkSw/MzNlZDVjNDctNGFkYS00ZjU4LTliYmItZTNkMGI3OTVkMjhk"
+            }
+          ],
+          "type": "multi_select"
+        },
+        "연락처": {
+          "description": "",
+          "name": "연락처",
+          "type": "text"
+        },
+        "요구사항": {
+          "description": "후원사가 요청한 반대급부",
+          "name": "요구사항",
+          "type": "text"
+        },
+        "이름": {
+          "description": "",
+          "name": "이름",
+          "type": "title"
+        },
+        "이메일": {
+          "description": "",
+          "name": "이메일",
+          "type": "email"
+        },
+        "작성자": {
+          "description": "",
+          "name": "작성자",
+          "type": "person"
+        },
+        "최종 확인일": {
+          "description": "",
+          "name": "최종 확인일",
+          "type": "date"
+        },
+        "품목·조건": {
+          "description": "",
+          "name": "품목·조건",
+          "type": "text"
+        },
+        "한 줄 요약": {
+          "description": "열어보지 않고 판단할 수 있게 한 줄로",
+          "name": "한 줄 요약",
+          "type": "text"
+        },
+        "형식": {
+          "description": "",
+          "name": "형식",
+          "options": [
+            {
+              "color": "brown",
+              "description": "",
+              "name": "업체·장소",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/Uz1Udw/OWRjZGYzMDktYWVmYi00MjQ3LThhNDQtNGVmNDFkYTQ1NTM1"
+            },
+            {
+              "color": "pink",
+              "description": "",
+              "name": "템플릿",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/Uz1Udw/MDlkZjlhNTAtZDlhNS00YWEyLWIxYmItMDM0MGI5NDA2NzFh"
+            },
+            {
+              "color": "purple",
+              "description": "",
+              "name": "산출물",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/Uz1Udw/YTRlMjBhYTctNzJkOS00NzZjLThjNmUtMzEyZDRiOWFhNWIw"
+            },
+            {
+              "color": "blue",
+              "description": "",
+              "name": "참고링크",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/Uz1Udw/ZWE2NWY1OWUtOGJiNy00ZDcwLThmMGUtMzZiMTA3Nzc4ZTYx"
+            },
+            {
+              "color": "green",
+              "description": "",
+              "name": "노하우",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/Uz1Udw/YTkzOGFlYTctMThlMy00MzY0LTk5NjYtMDllZDVlNGMzODkw"
+            },
+            {
+              "color": "orange",
+              "description": "",
+              "name": "첨부문서",
+              "url": "collectionPropertyOption://1a02463a-9512-82cb-8bc9-871eb46327a6/Uz1Udw/NjBmMGYwMTQtOGVmNS00OGEwLWE2NDEtNjI1MWU5MWJiMzRj"
+            }
+          ],
+          "type": "select"
+        },
+        "후원 품목": {
+          "description": "후원사 정보 원본에서 이관",
+          "name": "후원 품목",
+          "type": "text"
+        }
+      }
+    }
+  ]
+}
