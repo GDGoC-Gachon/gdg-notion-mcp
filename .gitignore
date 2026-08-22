@@ -1,2 +1,25 @@
+# Notion MCP token
 old-schema/
+
+# Dependencies
+node_modules/
+
+# Build
+dist/
+coverage/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# macOS
 .DS_Store
+
+# IDE
+.vscode/
+.idea/
